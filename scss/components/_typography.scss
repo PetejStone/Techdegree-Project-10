@@ -13,3 +13,17 @@ h3 {
   font-weight: $font-weight--medium;
   text-align: left;
 }
+
+.user {
+  margin: 0;
+  &--name {
+    font-weight: $font-weight--bold;
+    text-transform: capitalize;
+  }
+  &--email,
+  &--city {
+    font-weight: $font-weight--thin;
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+}

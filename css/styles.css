@@ -395,18 +395,28 @@ template {
 .cards {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   width: 100%; }
 
 .card {
-  width: 90%; }
+  width: 65%;
+  border-radius: 10px;
+  border: 1px solid #A9A9AD;
+  height: 9em;
+  margin-bottom: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-items: center;
+  padding: 20px; }
   @media (min-width: 768px) {
     .card {
-      width: 50%; } }
+      width: 45%; } }
   @media (min-width: 1024px) {
     .card {
-      width: 33%; } }
+      width: 31%; } }
 
 #overlay {
   display: flex;
@@ -458,5 +468,18 @@ h3 {
   color: #424267;
   font-weight: 400;
   text-align: left; }
+
+.user {
+  margin: 0; }
+  .user--name {
+    font-weight: 700;
+    text-transform: capitalize; }
+  .user--email, .user--city {
+    font-weight: 100;
+    font-size: 15px;
+    letter-spacing: 1px; }
+
+.thumbnail {
+  border-radius: 50%; }
 
 /*# sourceMappingURL=styles.css.map */

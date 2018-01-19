@@ -6,18 +6,27 @@
 
 .cards {
   @include flexy(flex, row);
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
   width: 100%;
 }
 
 .card {
-  width: 90%;
+  width: 65%;
+  border-radius: 10px;
+  border: 1px solid $border-color;
+  height: 9em;
+  margin-bottom: 1em;
+  @include flexy(flex, row);
+  justify-content: space-between;
+  align-items: flex-start;
+  align-items: center;
+  padding: 20px;
     @include mq(medium) {
-      width: 50%;
+      width: 45%;
     }
     @include mq(large) {
-      width: 33%;
+      width: 31%;
     }
 }
 
