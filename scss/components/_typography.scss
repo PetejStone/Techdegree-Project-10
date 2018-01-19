@@ -1,0 +1,15 @@
+body {
+  font-family: $helvetica-font-stack;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder,
+.slider:after {
+  font-size: 12px;
+}
+
+h3 {
+  color: $main-font-color;
+  font-weight: $font-weight--medium;
+  text-align: left;
+}
