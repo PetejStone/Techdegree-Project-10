@@ -47,3 +47,37 @@
   background-color: #000;
   opacity: .75;
 }
+
+.card--overlay {
+  width: 30%;
+  height: 60%;
+  position: absolute;
+  background-color: $card-background;
+  border-radius: 10px;
+  border: 1px solid $border-color;
+  margin-bottom: 1em;
+  @include flexy(flex, column);
+  align-items: flex-start;
+  align-items: center;
+  padding: 20px;
+
+}
+
+.overlay--info {
+  @include flexy(flex, column);
+  align-items: center;
+  padding-bottom: 1em;
+  border-bottom: 1px solid $border-color;
+}
+
+.overlay--contact {
+  @include flexy(flex, column);
+  padding-top: 1em;
+  text-transform: capitalize;
+  font-weight: $font-weight--thin;
+  letter-spacing: .85px;
+  text-align: center;
+  font-size: 13px;
+  align-items: center;
+  padding-bottom: 1em;
+}
