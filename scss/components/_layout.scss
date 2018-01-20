@@ -13,15 +13,19 @@
 
 .card {
   width: 65%;
+  max-width: 23em;
+  min-width: 20em;
   border-radius: 10px;
   border: 1px solid $border-color;
   height: 9em;
   margin-bottom: 1em;
   @include flexy(flex, row);
-  justify-content: space-between;
   align-items: flex-start;
   align-items: center;
   padding: 20px;
+  &:hover {
+    cursor: pointer;
+  }
     @include mq(medium) {
       width: 45%;
     }
@@ -48,19 +52,29 @@
   opacity: .75;
 }
 
+.close {
+  position: relative;
+  top: -2em;
+  left: -7.8em;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .card--overlay {
-  width: 30%;
-  height: 60%;
-  position: absolute;
+  width: 18em;
+  height: 25em;
+  position: fixed;
   background-color: $card-background;
   border-radius: 10px;
   border: 1px solid $border-color;
   margin-bottom: 1em;
   @include flexy(flex, column);
+  justify-content: space-around;
   align-items: flex-start;
   align-items: center;
   padding: 20px;
-
+  @extend %center-fixed;
 }
 
 .overlay--info {
@@ -80,4 +94,8 @@
   font-size: 13px;
   align-items: center;
   padding-bottom: 1em;
+}
+
+.user--info {
+  margin: auto;
 }

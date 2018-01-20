@@ -1,6 +1,7 @@
 let cards = document.querySelector('.cards');
 let card = document.querySelectorAll('.card');
 let cardOverlay = document.querySelectorAll('.card--overlay');
+const close = document.getElementsByClassName('close');
 
 
 $.ajax({
@@ -30,7 +31,7 @@ $.ajax({
     //Adds user image (overlay)
     for (let i=0; i < cardOverlay.length; i+=1) {
       let overlayImage = '<img src="'+results[i].picture.large+'" class="large"></a>';
-      cardOverlay[i].innerHTML = overlayImage;
+      cardOverlay[i].insertAdjacentHTML('beforeend',overlayImage);
     }
     //End of user image (overlay)
 
@@ -47,21 +48,47 @@ $.ajax({
     for (let i=0; i < cardOverlay.length; i+=1) {
       let userInfo = '<div class="overlay--contact"><p class="user user--phone">'+results[i].phone+'</p>';
       userInfo += '<p class="user user--address">'+results[i].location.street+' '+results[i].location.city+', ' +results[i].location.state+' '+results[i].location.postcode+ '</p>';
-      userInfo += '<p class="dob">Birthday: '+new Date(results[i].dob).toLocaleDateString('en-US')+'</p></div>';
+      userInfo += '<p class="user user--dob">Birthday: '+new Date(results[i].dob).toLocaleDateString('en-US')+'</p></div>';
       cardOverlay[i].insertAdjacentHTML('beforeend', userInfo);
     }
     //End user contact (overlay)
+
+    //Overlay Box appears when clicked
+
+    const image = document.getElementsByClassName('image');
+    const overlay = document.getElementById('overlay');
+
+    for (let i=0; i<card.length; i+=1) {
+      card[i].addEventListener('click', ()=> {
+        overlay.style.display = 'flex';
+      })
+    }
+
+    //End of Overlay Box
+
+
+    //Link to large photo from thumbnail
+
+    for (let i=0; i < cardOverlay.length; i+=1) {
+      const userName = card[i].children[1].children[0].textContent;
+      const overlayName = cardOverlay[i].children[2].children[0].textContent;
+      card[i].addEventListener('click', ()=> {
+        if (overlayName === userName) {
+          cardOverlay[i].style.display = 'flex';
+        }
+      });
+      close[i].addEventListener('click', ()=> {
+        overlay.style.display = 'none';
+        cardOverlay[i].style.display = 'none';
+      });
+    }
+
+
+
+    //End of link to large
+
 
 
 
   }  //end of function data
 }); //End of Ajax
-
-const image = document.getElementsByClassName('image');
-const overlay = document.getElementById('overlay');
-
-for (let i=0; i<image.length; i+=1) {
-  image[i].addEventListener('click', ()=> {
-    overlay.style.display = 'flex';
-  })
-}
