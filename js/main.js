@@ -109,6 +109,31 @@ $.ajax({
     //End of link to large
 
 
+//Autocomplete Function
+    for (let i=0; i< results.length; i+=1) {
+      $( function() {
+          var availableTags = [
+            results[i].name.first[0].toUpperCase() + results[i].name.first.substring(1) +' '+
+            results[i].name.last[0].toUpperCase() + results[i].name.last.substring(1),
+            ];
+            $( "#search-user" ).autocomplete({
+              source: availableTags
+      });
+    } );
+
+
+} //End of loop
+
+
+///End of search function
+
+
+
+
+
+
+
+
 
 
 

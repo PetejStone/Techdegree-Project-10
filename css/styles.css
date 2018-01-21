@@ -497,15 +497,29 @@ template {
 footer {
   font-size: 12px;
   font-style: italic;
-  color: #8A8A8A; }
-
-.icon-reference {
+  color: #8A8A8A;
   text-align: center; }
-  .icon-reference > a {
-    text-decoration: none;
-    list-style-type: none;
-    color: #8A8A8A;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.icon-reference > a {
+  text-decoration: none;
+  list-style-type: none;
+  color: #8A8A8A;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.ui-autocomplete {
+  max-height: 100px;
+  width: 5em;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  border-right: 1px solid black;
+  background-color: white;
+  text-align: center;
+  padding: 0;
+  /* prevent horizontal scrollbar */
+  overflow-x: hidden; }
+
+.ui-helper-hidden-accessible {
+  display: none; }
 
 #search-user {
   margin-top: 1em;
