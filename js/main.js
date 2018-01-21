@@ -2,6 +2,8 @@ let cards = document.querySelector('.cards');
 let card = document.querySelectorAll('.card');
 let cardOverlay = document.querySelectorAll('.card--overlay');
 const close = document.getElementsByClassName('close');
+const arrowLeft = document.getElementsByClassName('arrow--left');
+const arrowRight = document.getElementsByClassName('arrow--right');
 
 
 $.ajax({
@@ -71,21 +73,41 @@ $.ajax({
 
     for (let i=0; i < cardOverlay.length; i+=1) {
       const userName = card[i].children[1].children[0].textContent;
-      const overlayName = cardOverlay[i].children[2].children[0].textContent;
+      const overlayName = cardOverlay[i].children[4].children[0].textContent;
       card[i].addEventListener('click', ()=> {
         if (overlayName === userName) {
           cardOverlay[i].style.display = 'flex';
+          arrowLeft[i].style.display = 'none';
         }
       });
       close[i].addEventListener('click', ()=> {
         overlay.style.display = 'none';
         cardOverlay[i].style.display = 'none';
       });
+
+      arrowRight[i].addEventListener('click', ()=> {
+        if (cardOverlay[i].nextElementSibling !== null){
+        cardOverlay[i].style.display = 'none';
+        cardOverlay[i].nextElementSibling.style.display = 'flex';
+      } else {
+          arrowRight[i].style.display = 'none';
+        }
+      });
+
+
+      arrowLeft[i].addEventListener('click', ()=> {
+        if (cardOverlay[i].previousElementSibling !== null){
+          cardOverlay[i].style.display = 'none';
+          cardOverlay[i].previousElementSibling.style.display = 'flex';
+        } else {
+            arrowLeft[i].style.display = 'none';
+        }
+      });
+
     }
 
-
-
     //End of link to large
+
 
 
 

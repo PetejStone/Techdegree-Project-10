@@ -54,8 +54,8 @@
 
 .close {
   position: relative;
-  top: -2em;
-  left: -7.8em;
+  top: -.8em;
+  left: -8em;
   &:hover {
     cursor: pointer;
   }
@@ -68,12 +68,11 @@
   background-color: $card-background;
   border-radius: 10px;
   border: 1px solid $border-color;
-  margin-bottom: 1em;
   @include flexy(flex, column);
-  justify-content: space-around;
+  // justify-content: space-around;
   align-items: flex-start;
   align-items: center;
-  padding: 20px;
+  padding: 0px 2em;
   @extend %center-fixed;
 }
 
@@ -98,4 +97,33 @@
 
 .user--info {
   margin: auto;
+}
+
+.arrow {
+  position: absolute;
+  top: 22em;
+  margin-top: 5px;
+  &--left {
+    left: 6em;
+  }
+  &--right {
+    right: 6em;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+
+footer {
+  font-size: 12px;
+  font-style: italic;
+  color: $info-font-color;
+}
+
+.icon-reference {
+  text-align: center;
+  & > a {
+  @include link-reset($info-font-color, $helvetica-font-stack);
+  }
 }

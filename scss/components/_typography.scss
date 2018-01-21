@@ -15,19 +15,33 @@ h3 {
 }
 
 .user {
-  margin: 0;
+  margin: 0 0 3px 0;
+  letter-spacing:  0.9px;
+  word-spacing: -2px;
+
   &--name {
     font-weight: $font-weight--bold;
     text-transform: capitalize;
+
   }
   &--email,
   &--city {
     font-weight: $font-weight--thin;
     font-size: 12px;
     letter-spacing: 1px;
+
   }
   &--city {
     text-transform: capitalize;
     font-weight: $font-weight--medium;
+  }
+  &--address,
+  &--phone,
+  &--dob {
+    // font-style: italic;
+    margin-bottom: 8px;
+    font-weight: $font-weight--medium;
+    color: $info-font-color;
+
   }
 }
