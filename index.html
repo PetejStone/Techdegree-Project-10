@@ -8,7 +8,7 @@
 
   <body>
 
-    <!---////////////////// Reusable Icon ---------------------->
+    <!--- Reusable Icon-->
 
       <svg xmlns="http://www.w3.org/2000/svg" style="display:none;" >
       <symbol id="rightarrow" viewBox="0 0 31.49 31.49" >
@@ -17,11 +17,11 @@
       </svg>
 
       <svg xmlns="http://www.w3.org/2000/svg" style="display:none;">
-      <symbol id="leftarrow"viewBox="0 0 31.494 31.494">
+      <symbol id="leftarrow" viewBox="0 0 31.494 31.494">
         <path d="M10.273 5.009a1.112 1.112 0 0 1 1.587 0 1.12 1.12 0 0 1 0 1.571l-8.047 8.047h26.554c.619 0 1.127.492 1.127 1.111s-.508 1.127-1.127 1.127H3.813l8.047 8.032c.429.444.429 1.159 0 1.587a1.112 1.112 0 0 1-1.587 0L.321 16.532a1.12 1.12 0 0 1 0-1.571l9.952-9.952z" fill="#1e201d"/>
       </symbol>
       </svg>
-    <!---/////////////////////// End --------------------->
+    <!--- End-->
 
 
     <div id="overlay" class="start" style="display:none;">
@@ -30,7 +30,7 @@
     <div class="overlay-wrap">
         <div class="card--overlay 1" style="display:none;">
           <p class="close">X</p>
-          <svg class="arrow arrow--left" width="35" height="35">
+          <svg class="arrow arrow--left" width="35" height="35" style="display:none;">
             <use xlink:href="#leftarrow" />
           </svg>
           <svg class="arrow arrow--right" width="35" height="35">
@@ -143,7 +143,7 @@
           <svg class="arrow arrow--left" width="35" height="35">
             <use xlink:href="#leftarrow" />
           </svg>
-          <svg class="arrow arrow--right" width="35" height="35">
+          <svg class="arrow arrow--right" width="35" height="35" style="display:none;">
             <use xlink:href="#rightarrow" />
           </svg>
         </div>
@@ -151,13 +151,13 @@
 
 
 
-    <span class="top">
+    <div class="top">
       <div class="searchbar">
         <form class="search-user" action="index.html" method="post">
           <input class="ui-widget" type="search" id="search-user" name="user_search" placeholder="Search for User" data-list=".list">
         </form>
       </div>
-    </span>
+    </div>
 
     <main class="main-content">
       <h3>AWESOME STARTUP EMPLOYEE DIRECTORY</h3>
@@ -224,7 +224,7 @@
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script type="text/javascript" src="js/jquery.hideseek.min.js"></script>
+    <script src="js/jquery.hideseek.min.js"></script>
     <script>
       $(document).ready(function() {
       $('#search-user').hideseek();

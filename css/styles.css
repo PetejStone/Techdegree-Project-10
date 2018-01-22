@@ -555,7 +555,10 @@ textarea::-webkit-input-placeholder,
 h3 {
   color: #424267;
   font-weight: 400;
-  text-align: left; }
+  text-align: center; }
+  @media (min-width: 768px) {
+    h3 {
+      text-align: left; } }
 
 .user {
   margin: 0 0 3px 0;

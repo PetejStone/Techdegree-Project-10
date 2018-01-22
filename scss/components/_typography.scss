@@ -11,7 +11,11 @@ textarea::-webkit-input-placeholder,
 h3 {
   color: $main-font-color;
   font-weight: $font-weight--medium;
-  text-align: left;
+  text-align: center;
+  @include mq(medium) {
+    text-align: left;
+  }
+
 }
 
 .user {
