@@ -583,4 +583,21 @@ h3 {
 .large {
   margin-bottom: 1em; }
 
+@keyframes zoomOut {
+  0% {
+    transform: scale(1);
+    transition: transform ease-in-out;
+    box-shadow: 3px 5px 7px #61EDCD; }
+  50% {
+    transform: scale(1.1);
+    transition: transform ease-in-out;
+    box-shadow: 3px 5px 7px #61EDCD; }
+  100% {
+    transform: scale(1);
+    transition: transform ease-in-out;
+    box-shadow: 3px 5px 7px #61EDCD; } }
+.card:hover {
+  animation: zoomOut .3s;
+  box-shadow: 3px 5px 7px #61EDCD; }
+
 /*# sourceMappingURL=styles.css.map */

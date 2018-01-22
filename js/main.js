@@ -22,7 +22,7 @@ $.ajax({
 
     //Adds user info (before overlay)
     for (let i=0; i < card.length; i+=1) {
-      let userInfo = '<div class="user--info"><p class="user user--name">'+results[i].name.first +' '+ results[i].name.last+'</p>';
+      let userInfo = '<div class="user--info"><p class="user user--name list">'+results[i].name.first +' '+ results[i].name.last+'</p>';
       userInfo += '<p class="user user--email">'+results[i].email+'</p>';
       userInfo += '<p class="user user--city">'+results[i].location.city+'</p><div>';
       card[i].insertAdjacentHTML('beforeend', userInfo);
