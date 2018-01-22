@@ -154,7 +154,7 @@
     <div class="top">
       <div class="searchbar">
         <form class="search-user" action="index.html" method="post">
-          <input class="ui-widget" type="search" id="search-user" name="user_search" placeholder="Search for User" data-list=".list">
+          <input class="ui-widget" type="search" id="search-user" name="user_search" placeholder="Search for User" data-list=".list" autocomplete="off">
         </form>
       </div>
     </div>
@@ -223,11 +223,12 @@
 
     <script src="js/jquery.js"></script>
     <script src="js/main.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
     <script src="js/jquery.hideseek.min.js"></script>
     <script>
       $(document).ready(function() {
       $('#search-user').hideseek();
+
       });
   </script>
   </body>
