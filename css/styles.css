@@ -1,4 +1,4 @@
-.main-content, .searchbar, .search-user {
+.main-content, .page-content, .searchbar, .search-user {
   margin: 0 auto; }
 
 .card--overlay {
@@ -503,6 +503,9 @@ footer {
   list-style-type: none;
   color: #8A8A8A;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.page-content {
+  max-width: 1024px; }
 
 .ui-autocomplete {
   max-height: 100px;

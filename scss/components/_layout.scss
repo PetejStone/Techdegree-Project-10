@@ -132,7 +132,10 @@ footer {
 
 
 
-
+.page-content {
+  max-width: 1024px;
+  @extend %center;
+}
 
 
 
