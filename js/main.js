@@ -79,7 +79,7 @@ $.ajax({
           cardOverlay[i].style.display = 'flex';
         }
 
-      
+
 
       });
       close[i].addEventListener('click', ()=> {
@@ -110,49 +110,9 @@ $.ajax({
 
     //End of link to large
 
-    function users(){
 
-      for (let i=0; i<results.length;i+=1){
-        results[i].name.first[0].toUpperCase() + results[i].name.first.substring(1) +' '+
-        results[i].name.last[0].toUpperCase() + results[i].name.last.substring(1);
 
-      }
-    }
 
-//Autocomplete Function
-    // For loop only returned last element child. Will work out for-loop in refactor
-      $( function() {
-          var availableTags = [
-            results[0].name.first[0].toUpperCase() + results[0].name.first.substring(1) +' '+
-            results[0].name.last[0].toUpperCase() + results[0].name.last.substring(1),
-            results[1].name.first[0].toUpperCase() + results[1].name.first.substring(1) +' '+
-            results[1].name.last[0].toUpperCase() + results[1].name.last.substring(1),
-            results[2].name.first[0].toUpperCase() + results[2].name.first.substring(1) +' '+
-            results[2].name.last[0].toUpperCase() + results[2].name.last.substring(1),
-            results[3].name.first[0].toUpperCase() + results[3].name.first.substring(1) +' '+
-            results[3].name.last[0].toUpperCase() + results[3].name.last.substring(1),
-            results[4].name.first[0].toUpperCase() + results[4].name.first.substring(1) +' '+
-            results[4].name.last[0].toUpperCase() + results[4].name.last.substring(1),
-            results[5].name.first[0].toUpperCase() + results[5].name.first.substring(1) +' '+
-            results[5].name.last[0].toUpperCase() + results[5].name.last.substring(1),
-            results[6].name.first[0].toUpperCase() + results[6].name.first.substring(1) +' '+
-            results[6].name.last[0].toUpperCase() + results[6].name.last.substring(1),
-            results[7].name.first[0].toUpperCase() + results[7].name.first.substring(1) +' '+
-            results[7].name.last[0].toUpperCase() + results[7].name.last.substring(1),
-            results[8].name.first[0].toUpperCase() + results[8].name.first.substring(1) +' '+
-            results[8].name.last[0].toUpperCase() + results[8].name.last.substring(1),
-            results[9].name.first[0].toUpperCase() + results[9].name.first.substring(1) +' '+
-            results[9].name.last[0].toUpperCase() + results[9].name.last.substring(1),
-            results[10].name.first[0].toUpperCase() + results[10].name.first.substring(1) +' '+
-            results[10].name.last[0].toUpperCase() + results[10].name.last.substring(1),
-            results[11].name.first[0].toUpperCase() + results[11].name.first.substring(1) +' '+
-            results[11].name.last[0].toUpperCase() + results[11].name.last.substring(1),
-
-            ];
-            $( "#search-user" ).autocomplete({
-              source: availableTags
-      });
-    } );
 
 
 

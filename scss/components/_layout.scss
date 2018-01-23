@@ -23,6 +23,20 @@
   align-items: flex-start;
   align-items: center;
   padding: 20px;
+  &--overlay {
+    width: 18em;
+    height: 25em;
+    position: fixed;
+    background-color: $card-background;
+    border-radius: 10px;
+    border: 1px solid $border-color;
+    @include flexy(flex, column);
+    // justify-content: space-around;
+    align-items: flex-start;
+    align-items: center;
+    padding: 0px 2em;
+    @extend %center-fixed;
+  }
   &:hover {
     cursor: pointer;
   }
@@ -61,39 +75,27 @@
   }
 }
 
-.card--overlay {
-  width: 18em;
-  height: 25em;
-  position: fixed;
-  background-color: $card-background;
-  border-radius: 10px;
-  border: 1px solid $border-color;
-  @include flexy(flex, column);
-  // justify-content: space-around;
-  align-items: flex-start;
-  align-items: center;
-  padding: 0px 2em;
-  @extend %center-fixed;
+
+.overlay {
+  &--info {
+    @include flexy(flex, column);
+    align-items: center;
+    padding-bottom: 1em;
+    border-bottom: 1px solid $border-color;
+  }
+  &--contact {
+    @include flexy(flex, column);
+    padding-top: 1em;
+    text-transform: capitalize;
+    font-weight: $font-weight--thin;
+    letter-spacing: .85px;
+    text-align: center;
+    font-size: 13px;
+    align-items: center;
+    padding-bottom: 1em;
+  }
 }
 
-.overlay--info {
-  @include flexy(flex, column);
-  align-items: center;
-  padding-bottom: 1em;
-  border-bottom: 1px solid $border-color;
-}
-
-.overlay--contact {
-  @include flexy(flex, column);
-  padding-top: 1em;
-  text-transform: capitalize;
-  font-weight: $font-weight--thin;
-  letter-spacing: .85px;
-  text-align: center;
-  font-size: 13px;
-  align-items: center;
-  padding-bottom: 1em;
-}
 
 .user--info {
   margin: auto;
