@@ -23,20 +23,6 @@
   align-items: flex-start;
   align-items: center;
   padding: 20px;
-  &--overlay {
-    width: 18em;
-    height: 25em;
-    position: fixed;
-    background-color: $card-background;
-    border-radius: 10px;
-    border: 1px solid $border-color;
-    @include flexy(flex, column);
-    // justify-content: space-around;
-    align-items: flex-start;
-    align-items: center;
-    padding: 0px 2em;
-    @extend %center-fixed;
-  }
   &:hover {
     cursor: pointer;
   }
@@ -48,73 +34,6 @@
     }
 }
 
-
-
-#overlay {
-  display: flex;
-  flex-direction: column;
-  position: fixed;
-  color: #FFFFFF;
-  justify-content: center;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  border-radius: 5px;
-  font-size: 5em;
-  background-color: #000;
-  opacity: .75;
-}
-
-.close {
-  position: relative;
-  top: -.8em;
-  left: -8em;
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-
-.overlay {
-  &--info {
-    @include flexy(flex, column);
-    align-items: center;
-    padding-bottom: 1em;
-    border-bottom: 1px solid $border-color;
-  }
-  &--contact {
-    @include flexy(flex, column);
-    padding-top: 1em;
-    text-transform: capitalize;
-    font-weight: $font-weight--thin;
-    letter-spacing: .85px;
-    text-align: center;
-    font-size: 13px;
-    align-items: center;
-    padding-bottom: 1em;
-  }
-}
-
-
-.user--info {
-  margin: auto;
-}
-
-.arrow {
-  position: absolute;
-  top: 22em;
-  margin-top: 5px;
-  &--left {
-    left: 6em;
-  }
-  &--right {
-    right: 6em;
-  }
-  &:hover {
-    cursor: pointer;
-  }
-}
 
 
 footer {
