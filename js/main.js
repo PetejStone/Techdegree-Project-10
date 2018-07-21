@@ -50,7 +50,7 @@ $.ajax({
     for (let i=0; i < cardOverlay.length; i+=1) {
       let userInfo = '<div class="overlay--contact"><p class="user user--phone">'+results[i].phone+'</p>';
       userInfo += '<p class="user user--address">'+results[i].location.street+' '+results[i].location.city+', ' +results[i].location.state+' '+results[i].location.postcode+ '</p>';
-      userInfo += '<p class="user user--dob">Birthday: '+new Date(results[i].dob).toLocaleDateString('en-US')+'</p></div>';
+      userInfo += '<p class="user user--dob">Birthday: '+new Date(results[i].dob.date).toLocaleDateString('en-US')+'</p></div>';
       cardOverlay[i].insertAdjacentHTML('beforeend', userInfo);
     }
     //End user contact (overlay)
